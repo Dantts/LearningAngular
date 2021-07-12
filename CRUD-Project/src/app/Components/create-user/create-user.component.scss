@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+$font-staat: 'Dela Gothic One', cursive;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.global-container{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background:rgba($color: black, $alpha: 0.3);
+  z-index: 1;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+  width: 768px;
+  height: 469px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 9px -1px #000000;
+  box-shadow: 0px 0px 9px -1px #000000;
+
+  .close{
+    background: none;
+    border: none;
+    position: absolute;
+    margin-left: 720px;
+    margin-top: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+
+    p{
+      font-family: $font-staat;
+      color: black;
+      font-size: 28px;
+      font-weight: bold;
+
+    }
+  }
+
+  .global-inputs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+
+    .input-text-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 50px;
+      width: 100%;
+
+      .input-content{
+        background: white;
+        margin: 0 5% 0 5%;
+        border: none;
+        width: 25%;
+        text-align: center;
+        height: 2.2rem;
+        border: 1px solid black;
+        border-radius: 20px;
+        outline: none;
+        -webkit-box-shadow: 0px 0px 5px -1px #000000;
+        box-shadow: 0px 0px 5px -1px #000000;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+      }
+
+      .number-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        width: 25%;
+        text-align: center;
+        height: 2.3rem;
+        border: 1px solid black;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 0px 5px -1px #000000;
+        box-shadow: 0px 0px 5px -1px #000000;
+        margin: 0 5% 0 5%;
+      }
+
+      .number-input{
+        z-index: 1;
+        text-align: center;
+        background: none;
+        border: none;
+        width: 90%;
+        margin-top: 10px;
+        outline: none;
+      }
+
+      .number-label{
+        position: absolute;
+        background: white;
+        margin-bottom: 21px;
+        color: rgba($color: gray, $alpha: 0.9);
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+      }
+
+    }
+
+    .inputs-checkbox-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 50px;
+      width: 100%;
+
+      .checkbox-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        width: 25%;
+        text-align: center;
+        height: 2.3rem;
+        border: 1px solid black;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 0px 5px -1px #000000;
+        box-shadow: 0px 0px 5px -1px #000000;
+        margin: 0 5% 0 5%;
+
+        .checkbox-input{
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+
+        label{
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          color: rgba($color: gray, $alpha: 0.9);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .buttons-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 60%;
+      height: 20px;
+      margin-top: 50px;
+      z-index: 1;
+
+      button{
+        border: none;
+        height: 2.2rem;
+        width: 5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+
+        &:hover{
+          background: rgb(27, 27, 27);
+        }
+
+        &:disabled{
+          cursor: not-allowed;
+        }
+      }
+
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    .dragDrop-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 1.7rem;
+    }
+
+    .dragDrop-image{
+      cursor: pointer;
+    }
+
+  }
+
+  .wave{
+    position: absolute;
+    width: 768px;
+    margin-top: 18.7rem;
+
+    .wave-svg{
+      border-radius: 0 0 20px 20px;
+    }
+  }
+
+}

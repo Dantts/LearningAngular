@@ -1,0 +1,9 @@
+<app-create-user *ngIf="showAddUserPage" [setViewAddUserPage]="setViewAddUserPage"></app-create-user>
+<app-navigation-bar [setViewAddUserPage]="setViewAddUserPage" ></app-navigation-bar>
+
+<div>
+  <section *ngFor="let user of userState; let i=index">
+    <app-card-user [user]="user"></app-card-user>
+  </section>
+</div>
+

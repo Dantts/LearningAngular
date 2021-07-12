@@ -1,0 +1,76 @@
+
+<div class="global-component">
+  <div class="content-container">
+
+    <div class="img-container">
+      <img [src]="user.imageProfile" alt="Image Profile">
+      <div>
+        <p>{{user.name}}</p>
+        <p>{{user.lastName}}</p>
+      </div>
+      <button (click)="goToBack()">Voltar</button>
+    </div>
+
+    <div class="information-container">
+      <div>
+        <section>
+          <p>Gender:</p>
+          <span *ngIf="!user.isWoman">Male 🙋‍♂️</span>
+          <span *ngIf="user.isWoman">Female 🙋</span>
+        </section>
+
+        <section>
+          <p>Working:</p>
+          <span *ngIf="user.isWork">Working ✅</span>
+          <span *ngIf="!user.isWork">Not Working ❌</span>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <p>Email:</p>
+          <span>{{user.email}}</span>
+        </section>
+
+        <section>
+          <p>Phone Number:</p>
+          <span>{{user.numberPhone}}</span>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <p>Address:</p>
+          <span>{{user.address}}</span>
+        </section>
+
+        <section>
+          <p>Address Number:</p>
+          <span>{{user.addressNumber}}</span>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <p>Work Place:</p>
+          <span>{{user.workPlace}}</span>
+        </section>
+
+        <section>
+          <p>Salary:</p>
+          <span>R$ {{user.salary}}</span>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <button class="edit-button" (click)="goToEdit()">Editar</button>
+        </section>
+
+        <section>
+          <button class="delete-button" (click)="deleteEmployee()">Excluir</button>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

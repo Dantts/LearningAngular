@@ -1,0 +1,11 @@
+
+<div class="card-container">
+  <img [src]="user.imageProfile" alt="Image Profile">
+  <div>
+    <p>{{user.name}}</p>
+    <p>{{user.lastName}}</p>
+  </div>
+  <p>Gender: <span *ngIf="user.isMan">Male 🙋‍♂️</span><span *ngIf="!user.isMan">Female 🙋</span></p>
+  <p>Working: <span *ngIf="user.isWork">✅</span> <span *ngIf="!user.isWork">❌</span></p>
+  <button (click)="goUserInformation()">More Information</button>
+</div>

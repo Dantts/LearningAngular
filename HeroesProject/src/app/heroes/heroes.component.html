@@ -1,0 +1,8 @@
+<div class="heroes">
+  <div *ngFor="let hero of heroes" (click)="onSelectHero(hero)">
+    <p class="heroName" [class.selected]="hero === seletedHero" ><span>{{hero.id}}: </span>{{hero.name | uppercase}}</p>
+  </div>
+</div>
+
+<app-hero-details [hero]="seletedHero"></app-hero-details>
+<app-messages></app-messages>

@@ -1,0 +1,29 @@
+
+.heroes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: red;
+
+  .heroName{
+    margin: .5rem;
+    background: rgb(192, 192, 192);
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover{
+      background: rgb(165, 165, 165);
+    }
+  }
+
+  .selected{
+    background: black;
+    color: white;
+
+    &:hover{
+      background: black;
+    }
+  }
+}
