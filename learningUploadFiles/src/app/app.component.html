@@ -1,0 +1,25 @@
+
+<div class="general-container">
+  <div class="inputs-container">
+    <div>
+      <input type="file" (change)="getFiles($event)" multiple>
+      <button (click)="onUploadFile()">SEND FILES</button>
+    </div>
+    <p><ngb-progressbar type="success" textType="white" [value]="progress" [showValue]="true"></ngb-progressbar></p>
+  </div>
+</div>
+<div *ngIf="files$ | async as files">
+
+  <div *ngFor="let file of files" class="content">
+    <div class="content-container">
+      <p>{{file.name}}</p>
+    </div>
+    <div class="content-container">
+      <a [href]="file.download" class="button">Download</a>
+      <button (click)="deleteFile(file.id)" class="button">Delete</button>
+    </div>
+  </div>
+
+</div>
+
+
