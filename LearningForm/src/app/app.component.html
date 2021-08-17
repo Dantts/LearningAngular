@@ -1,0 +1,13 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+  <label for="">cpf</label>
+  <input formControlName="cpf" id="cpf" required [mask]="masks.cpf">
+  <label for="">phone</label>
+  <input type="text" formControlName="phone" required [mask]="masks.phone">
+  <label for="">Porcent</label>
+  <input type="text" formControlName="porcent" required [mask]="masks.porcent" suffix="%">
+  <label for="">Aniversario</label>
+  <input formControlName="age" required [mask]="masks.birthday">
+  <label for="">preço</label>
+  <input formControlName="preco" required mask="separator.2" thousandSeparator=".">
+  <input type="submit" value="Salvar">
+</form>

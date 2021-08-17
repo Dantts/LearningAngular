@@ -1,0 +1,17 @@
+#seila1{
+  height: 295mm;
+  width: 205mm;
+  background-color: gray;
+}
+
+
+.page{
+  padding: 50px;
+}
+
+#seila2{
+  margin-top: 10px;
+  height: 295mm;
+  width: 205mm;
+  background-color: gray;
+}
