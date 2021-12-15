@@ -1,0 +1,5 @@
+<div *ngIf="counter$ | async as counter">
+  <h1>Counter: {{ counter.counter }}</h1>
+  <button (click)="increment()">increment</button>
+  <button (click)="decrement()">decrement</button>
+</div>
